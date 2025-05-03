@@ -165,7 +165,7 @@
       }
 
       signInWithEmailAndPassword(auth, email, password)
-        .then(() => window.location.href = "https://ravemaster.store/karlanag")
+        .then(() => window.location.href = " https://rave-master.github.io/penro-ddn-portal-w-phone-draft2/home.html")
         .catch(error => alert("Login failed: " + error.message));
     };
 
@@ -173,7 +173,7 @@
     window.loginWithGoogle = function () {
       const provider = new GoogleAuthProvider();
       signInWithPopup(auth, provider)
-        .then(() => window.location.href = "https://ravemaster.store/karlang")
+        .then(() => window.location.href = " https://rave-master.github.io/penro-ddn-portal-w-phone-draft2/home.html")
         .catch(error => alert("Google login failed: " + error.message));
     };
 
@@ -181,7 +181,7 @@
     window.loginWithFacebook = function () {
       const provider = new FacebookAuthProvider();
       signInWithPopup(auth, provider)
-        .then(() => window.location.href = "https://ravemaster.store/karlang")
+        .then(() => window.location.href = " https://rave-master.github.io/penro-ddn-portal-w-phone-draft2/home.html")
         .catch(error => alert("Facebook login failed: " + error.message));
     };
 
@@ -205,7 +205,7 @@
     window.verifyOTP = function () {
       const code = document.getElementById("otp").value;
       confirmationResult.confirm(code)
-        .then(() => window.location.href = "https://ravemaster.store/karlang")
+        .then(() => window.location.href = " https://rave-master.github.io/penro-ddn-portal-w-phone-draft2/home.html")
         .catch((error) => alert("OTP verification failed: " + error.message));
     };
   </script>
