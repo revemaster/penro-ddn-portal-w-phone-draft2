@@ -4,6 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DENR-PENRO DDN</title>
+
+  <!-- Firebase Auth Redirect Check -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD2xLVGe79OxzEHC2uXNMcbCtWugGn2M_k",
+      authDomain: "simple-logon.firebaseapp.com",
+      projectId: "simple-logon",
+      storageBucket: "simple-logon.firebasestorage.app",
+      messagingSenderId: "698709393716",
+      appId: "1:698709393716:web:5d93c85f962769d8a42561",
+      measurementId: "G-H25FHTK2S5"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        // Not logged in, redirect to login page
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -92,7 +119,6 @@
   </div>
 
   <script>
-    // You can later replace this array with Firebase data
     const cards = [
       {
         title: "About Us",
